@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "GuessingGame";
+}
+
+<h1>GuessingGame</h1>
+
+
+<p>Guess a number between 1 and 100 </p>
+<p>@ViewBag.Diagnos</p>
+
+
+<form asp-action="GuessingGame" asp-controller="GameControler" method="post">
+    <input type="text" name="Userinput" />
+
+    <button type="submit">Guess</button>
+
+</form>
+

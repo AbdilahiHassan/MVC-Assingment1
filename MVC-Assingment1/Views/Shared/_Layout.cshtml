@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/Mystyle.css" rel="stylesheet" />
+
+</head>
+<body>
+   <header>
+       <h1>Logo</h1>
+       <nav>
+           <ul>
+               <li> @Html.ActionLink("Index", "Index", "Home")</li>
+               <li>@Html.ActionLink("About", "About", "Home")</li>
+               <li>
+                   @*Html.ActionLink("Contact", "Contact", "Home")*@
+                   <a asp-action="Contact" asp-controller="Home">Content Me</a>
+               </li>
+               <li>
+                   @*Html.ActionLink("Projects", "Projects","Home")*@
+                   <a asp-action="Projects" asp-controller="Home">Projects</a>
+               </li>
+               <li><a asp-action="FeverCheck" asp-controller="Doctor">FeverCheck</a></li>
+            
+               <li><a asp-action="GuessingGame" asp-controller="GameControler">GeusingGames</a></li>
+               
+
+           </ul>
+       </nav>
+   </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>&copy; @DateTime.Now   Hassan </footer>
+</body>
+</html>
